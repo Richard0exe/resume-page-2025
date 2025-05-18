@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lexend: "Lexend", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+.top-button {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+@media (max-width: 767px) {
+  .top-button {
+    display: none !important;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+}
+
+/* add animation only on md and up */
+@media (min-width: 768px) {
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+  /* no animation here */
+  }
+}
