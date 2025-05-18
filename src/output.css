@@ -251,9 +251,6 @@
   .mb-40 {
     margin-bottom: calc(var(--spacing) * 40);
   }
-  .ml-24 {
-    margin-left: calc(var(--spacing) * 24);
-  }
   .box-border {
     box-sizing: border-box;
   }
@@ -294,6 +291,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .min-h-\[840px\] {
     min-height: 840px;
@@ -583,6 +583,21 @@
       right: calc(var(--spacing) * 26);
     }
   }
+  .md\:bottom-20 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:bottom-22 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 22);
+    }
+  }
+  .md\:bottom-30 {
+    @media (width >= 48rem) {
+      bottom: calc(var(--spacing) * 30);
+    }
+  }
   .md\:bottom-auto {
     @media (width >= 48rem) {
       bottom: auto;
@@ -608,9 +623,9 @@
       display: none;
     }
   }
-  .md\:w-full {
+  .md\:min-h-\[840px\] {
     @media (width >= 48rem) {
-      width: 100%;
+      min-height: 840px;
     }
   }
   .md\:origin-top-right {
@@ -694,11 +709,6 @@
       text-align: center;
     }
   }
-  .md\:text-left {
-    @media (width >= 48rem) {
-      text-align: left;
-    }
-  }
   .md\:text-6xl {
     @media (width >= 48rem) {
       font-size: var(--text-6xl);
@@ -716,6 +726,26 @@
       font-size: 200px;
     }
   }
+  .lg\:absolute {
+    @media (width >= 64rem) {
+      position: absolute;
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
+    }
+  }
+  .xl\:block {
+    @media (width >= 80rem) {
+      display: block;
+    }
+  }
+  .\32 xl\:bottom-24 {
+    @media (width >= 96rem) {
+      bottom: calc(var(--spacing) * 24);
+    }
+  }
   .\32 xl\:mt-0 {
     @media (width >= 96rem) {
       margin-top: calc(var(--spacing) * 0);
@@ -729,6 +759,11 @@
   .\32 xl\:ml-24 {
     @media (width >= 96rem) {
       margin-left: calc(var(--spacing) * 24);
+    }
+  }
+  .\32 xl\:min-h-\[840px\] {
+    @media (width >= 96rem) {
+      min-height: 840px;
     }
   }
   .\32 xl\:w-auto {
@@ -749,6 +784,13 @@
   .\32 xl\:text-left {
     @media (width >= 96rem) {
       text-align: left;
+    }
+  }
+  .md\:2xl\:bottom-24 {
+    @media (width >= 48rem) {
+      @media (width >= 96rem) {
+        bottom: calc(var(--spacing) * 24);
+      }
     }
   }
 }
