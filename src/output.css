@@ -191,11 +191,20 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .bottom-24 {
-    bottom: calc(var(--spacing) * 24);
+  .right-4 {
+    right: calc(var(--spacing) * 4);
+  }
+  .right-5 {
+    right: calc(var(--spacing) * 5);
+  }
+  .right-8 {
+    right: calc(var(--spacing) * 8);
   }
   .bottom-25 {
     bottom: calc(var(--spacing) * 25);
+  }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
   }
   .left-26 {
     left: calc(var(--spacing) * 26);
@@ -292,9 +301,6 @@
   .h-full {
     height: 100%;
   }
-  .h-screen {
-    height: 100vh;
-  }
   .min-h-\[840px\] {
     min-height: 840px;
   }
@@ -342,6 +348,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .space-y-2 {
     :where(& > :not(:last-child)) {
@@ -445,11 +454,17 @@
   .pr-0 {
     padding-right: calc(var(--spacing) * 0);
   }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
+  }
   .text-center {
     text-align: center;
   }
   .text-left {
     text-align: left;
+  }
+  .text-right {
+    text-align: right;
   }
   .font-lexend {
     font-family: var(--font-lexend);
@@ -583,19 +598,9 @@
       right: calc(var(--spacing) * 26);
     }
   }
-  .md\:bottom-20 {
-    @media (width >= 48rem) {
-      bottom: calc(var(--spacing) * 20);
-    }
-  }
   .md\:bottom-22 {
     @media (width >= 48rem) {
       bottom: calc(var(--spacing) * 22);
-    }
-  }
-  .md\:bottom-30 {
-    @media (width >= 48rem) {
-      bottom: calc(var(--spacing) * 30);
     }
   }
   .md\:bottom-auto {
@@ -621,11 +626,6 @@
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
-    }
-  }
-  .md\:min-h-\[840px\] {
-    @media (width >= 48rem) {
-      min-height: 840px;
     }
   }
   .md\:origin-top-right {
@@ -726,16 +726,6 @@
       font-size: 200px;
     }
   }
-  .lg\:absolute {
-    @media (width >= 64rem) {
-      position: absolute;
-    }
-  }
-  .lg\:block {
-    @media (width >= 64rem) {
-      display: block;
-    }
-  }
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
@@ -761,11 +751,6 @@
       margin-left: calc(var(--spacing) * 24);
     }
   }
-  .\32 xl\:min-h-\[840px\] {
-    @media (width >= 96rem) {
-      min-height: 840px;
-    }
-  }
   .\32 xl\:w-auto {
     @media (width >= 96rem) {
       width: auto;
@@ -784,13 +769,6 @@
   .\32 xl\:text-left {
     @media (width >= 96rem) {
       text-align: left;
-    }
-  }
-  .md\:2xl\:bottom-24 {
-    @media (width >= 48rem) {
-      @media (width >= 96rem) {
-        bottom: calc(var(--spacing) * 24);
-      }
     }
   }
 }
